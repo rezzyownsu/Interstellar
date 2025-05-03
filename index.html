@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Stellar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        #loading-screen {
+            display: block;
+        }
+
+        #message-screen {
+            display: none;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-size: 3em;
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        #loading-text {
+            font-size: 1.2em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Loading Screen -->
+        <div id="loading-screen">
+            <h1 id="header">Adam Stellar</h1>
+            <p id="loading-text">Loading... Please wait.</p>
+        </div>
+
+        <!-- Message Screen (hidden initially) -->
+        <div id="message-screen" style="display: none;">
+            <h2>Project Adam</h2>
+            <p>A project Adam has been working on since they blocked Doge. They are such idiots!</p>
+        </div>
+    </div>
+
+    <script>
+        // Wait for the page to load
+        window.onload = function() {
+            // Simulate a delay (you can adjust this to how long you want the loading screen to show)
+            setTimeout(function() {
+                // Hide the loading screen
+                document.getElementById('loading-screen').style.display = 'none';
+                
+                // Show the custom message screen
+                document.getElementById('message-screen').style.display = 'block';
+            }, 3000); // 3 seconds delay (you can modify this duration)
+        }
+    </script>
+</body>
+</html>
